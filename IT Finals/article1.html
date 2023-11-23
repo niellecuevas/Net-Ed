@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Network Topologies</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+
+<!-- Sidenav bar start-->
+
+	<nav>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		<div class="logo">
+			<ul id="logo2">
+				<li id="net">Net</li>
+				<li id="ed">Ed</li>
+			</ul>
+		</div>
+
+
+		<div id="mySidenav" class="sidenav" id="list-height">
+			<div id="exit-btn">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			</div>
+
+			<div id="options">
+			<a href="index.html">Home</a>
+			<button class="dropdown-btn" id="art-hov">Articles </button>
+			<div class="dropdown-container">
+				<a href="article1.html">Network Topologies</a>
+				<a href="article2.html">Transmission Media</a>
+				<a href="article3.html">Network Adapters</a>
+				<a href="article4.html">Client/Server Networks</a>
+			</div>
+			<a href="about-us.html">About Us</a>
+			</div>
+	</div>
+	</nav>
+<!-- sidebar navigation end -->
+
+<img id="net-top-banner" src="img/network2.png">
+
+<!-- content -->
+
+<div class="title-holder">
+	<h2>Network Topology</h2>
+	<p>Network Topology represents a network arrangement consisting of several nodes, i.e. sender and receiver nodes, and the lines connecting them.
+	</p>
+</div>
+
+<div class="content-holder">
+	<h3>Types of Network Topology</h3>
+	<p>Let us look at the type of Network Topologies available.</p>
+	<h4>1. Bus Topology</h4>
+	<p>Bus topology is the kind of network topology where every node, i.e. every device on the network, is connected to a solo main cable line. Data is transmitted in a single route, from one point to the other. We cannot transmit data in both ways. When this topology has precisely two endpoints, it is known as Linear Bus Topology. It is mostly used for small networks.</p>
+
+	<p id = "special-text">Benefits of Bus Topology</p>
+	<ul>
+		<li>It works very efficient well when there is a small network. Length of cable required is less than a star topology. It is easy to connect or remove devices in this network without affecting any other device. </li>
+		<li>Very cost-effective as compared to other network topology i.e. mesh and star.</li>
+	</ul>
+
+	<p id = "special-text">Drawbacks of Bus Topology</p>
+	<ul>
+		<li>If the main cable collapses, the complete network collapses.</li>
+		<li>The network performance is at stake and reduces if there are numerous nodes and heavy network traffic.</li>
+		<li>The main cable can only be so long. The length of the cable is limited. </li>
+		<li>Bus Topology is not as fast as Ring Topology.</li>
+	</ul>
+<br>
+	<h4>2. Ring Topology</h4>
+	<p>Ring Topology is a topology type in which every computer is connected to another computer on each side. The last computer is connected to the first, thus forming a ring shape. This topology allows for each computer to have exactly two neighbouring computers.
+	<br>
+	In this topology, the main computer is known as the monitor station, which is responsible for all the operations. Data transmission amongst devices is done with the help of tokens. For transmitting data, the computer station has to hold the token. The token is released only when the transmission is complete, following which other computer stations can use the token to transmit data.
+	<br>
+	Data transmission is done in a sequential method, i.e. bit by bit. Therefore, data has to route its way through each node in the network to reach the destination node. We use repeaters in a Ring topology to prevent loss of data during transmission. These repeaters are especially helpful when the topology has a vast number of nodes, and the data is to reach the very last node in the network.
+	<br>
+	The data transmission is unidirectional in a Ring topology, but it can be created to be bidirectional by connecting each node with another set of connecting lines. This is known as Dual Ring Topology. Here, two ring networks are created, with the data in each flowing in opposite directions.</p>
+
+	<p id = "special-text">Benefits of Ring Topology</p>
+	<ul>
+		<li>The network is not affected by numerous nodes or heavy traffic, as only the nodes possessing tokens can transfer data.</li>
+		<li>Ring topology has cheap installation and expansion.</li>
+	</ul>
+
+	<p id = "special-text">Drawbacks of Ring Topology</p>
+	<ul>
+		<li>It is a tedious task to troubleshoot in Ring topology.</li>
+		<li>It is difficult to add or delete nodes, as it interrupts the network activity.</li>
+		<li>If one computer crashes, the entire network activity is disrupted.</li>
+  </ul>
+<br>
+	<h4>3. Star Topology</h4>
+	<p>Star Topology is the kind of network topology in which all the nodes are connected via cables to a single node called a hub, which is the central node. The hub can be active or passive in nature. Active hubs contain repeaters, while passive hubs are considered non-intelligent nodes. Each node contains a reserved connection to the central node, which the central node acting as a repeater during data transmission.</p>
+
+	<p id = "special-text">Benefits of Star Topology</p>
+	<ul>
+		<li>Star topology boasts fast performance due to low network traffic.</li>
+		<li>It is easy to upgrade the Hub as and when required.</li>
+		<li>Setup can be done easily and can be easily modified as well.</li>
+		<li>Star Topology is easy to troubleshoot.In case a node has failed, it can easily be replaced without affecting the working of the rest of the network.</li>
+	</ul>
+	<p id = "special-text">Drawbacks of Star Topology</p>
+	<ul>
+		<li>It is expensive to install as this type of network uses the most cable (network cable is expensive).</li>
+		<li>Extra hardware is required (hubs or switches) which adds to cost.</li>
+		<li>If a hub or switch fails, all the devices connected to it will have no network connection. </li>
+	</ul>
+<br>
+	<h4>4. Mesh Topology</h4>
+	<p>Mesh topology is the kind of topology in which all the nodes are connected with all the other nodes via a network channel. Mesh topology is a point-to-point connection. It has <i>n(n-1)/2</i> network channels to connect <i>n</i> nodes.
+	Mesh topology has two techniques for transmission of data, i.e. routing and flooding. In the routing technique, the nodes possess a routing logic, like the logic for the shortest distance to the destination node or the logic to avoid routes with broken connections. In the flooding technique, all the network nodes receive the same data. This leaves us no need for routing logic. This technique makes the network robust but results in unwanted load on the network.</p>
+
+	<p id = "special-text">Benefits of Mesh Topology</p>
+	<ul>
+		<li>Every connection has the ability to carry its particular data load.</li>
+		<li>Mesh Topology is very robust.</li>
+		<li>It is easy to diagnose faults.</li>		
+		<li>Mesh Topology provides privacy and security.</li>
+	</ul>
+	<p id = "special-text">Drawbacks of Mesh Topology</p>
+	<ul>
+		<li>It's costly as compared to the opposite network topologies i.e. star, bus, point to point topology.</li>
+		<li>Installation is extremely difficult in the mesh.</li>
+		<li>Power requirement is higher as all the nodes will need to remain active all the time and share the load.</li>
+		<li>Complex process.</li>
+	</ul>
+<br>
+	<h4>5. Tree Topology</h4>
+	<p>Tree topology is the topology in which the nodes are connected hierarchically, with all the nodes connected to the topmost node or root node. Hence, it is also known as hierarchical topology. Tree topology has at least three levels of hierarchy.
+	Tree topology is applied in Wide Area Network. It is an extension of Bus topology and Star topology. It is best if the workstations are situated in groups, for easy working and managing.</p>
+
+	<p id = "special-text">Benefits of Tree Topology</p>
+	<ul>
+		<li>It is easy to expand the network with more nodes.</li>
+		<li>It is easy to maintain and manage.</li>
+		<li>It is easy to detect an error in the network.</li>
+	</ul>
+	<p id = "special-text">Drawbacks of Tree Topology</p>
+	<ul>
+		<li>It is profoundly cabled.</li>
+		<li>It is expensive when compared to other topologies.</li>
+		<li>If the root node collapses, the network will also collapse.</li>
+	</ul>
+	<br>
+	<h4>6. Hybrid Topoloogy</h4>
+	<p>Hybrid Topology is basically a network topology comprising of two or more different types of topologies. It is a reliable and scalable topology, but simultaneously, it is a costly one. It receives the merits and demerits of the topologies used to build it.</p>
+
+	<p id = "special-text">Benefits of Hybrid Topology</p>
+	<ul>
+		<li>It is easy to troubleshoot and provides simple error-detecting techniques.</li>
+		<li>It is a flexible network topology, making it quite effective.</li>
+		<li>It is scalable since the size can be made greater easily.</li>
+	</ul>
+	<p id = "special-text">Drawbacks of Hybrid Topology</p>
+	<ul>
+		<li>It isn’t very easy to design it.</li>
+		<li>It is costly, as it involves more than one topologies.</li>
+	</ul>
+
+</div>
+
+<footer>
+	<h4>Pedamkar, P., (2020), “Types of Network Topology.” <i>Educba</i>, Corporate Bridge Consultancy Pvt Ltd</h4>
+	<a class="cite-link" target="_blank" style="text-decoration: none; " href="https://www.educba.com/types-of-network-topology/">https://www.educba.com/types-of-network-topology/</a>
+</footer>
+
+ <button onclick="topFunction()" id="scrollUP" title="Go to top">Top</button>
+
+	<!--dropdown javascript (andito po kase ayaw gumana sa separate file ng js. ehe) -->
+
+	<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+//scroll to top btn
+var mybutton = document.getElementById("scrollUP");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

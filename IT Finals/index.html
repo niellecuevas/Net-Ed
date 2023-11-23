@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NetEd</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+
+<!-- Sidenav bar start-->
+
+	<nav>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		<div class="logo">
+			<ul id="logo2">
+				<li id="net">Net</li>
+				<li id="ed">Ed</li>
+			</ul>
+		</div>
+
+
+		<div id="mySidenav" class="sidenav" id="list-height">
+			<div id="exit-btn">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			</div>
+
+			<div id="options">
+			<a href="index.html">Home</a>
+			<button class="dropdown-btn" id="art-hov">Articles </button>
+			<div class="dropdown-container">
+				<a href="article1.html">Network Topologies</a>
+				<a href="article2.html">Transmission Media</a>
+				<a href="article3.html">Network Adapters</a>
+				<a href="article4.html">Client/Server Networks</a>
+			</div>
+			<a href="about-us.html">About Us</a>
+			</div>
+	</div>
+	</nav>
+<!-- sidebar navigation end -->
+
+
+<div class="banner-container">
+  <img src="img/banner-img3.jpg" class="banner">
+  <div class="overlay">
+  	<div class="text-overlay">Networking in the Business World</div>
+  </div>
+ </div>
+
+ <!--Banner Design End -->
+
+ <div class="content-holder">
+ 	<h3>What Does Networking in Business Mean to a Student Like Me?</h3>
+ 	<p>
+ 		Many of us have probably heard of the word "networking", and if you ask the common folk, they'd say <i>"oh, you mean those pyramid scams?"</i>. Well, to a budding IT professional like me, it means a whole lot more - but in a more technical manner. <br>
+ 		<b><i>What does network even mean, anyway?</i></b> <br>
+ 		When a person in IT says something about networking, they most likely mean the complicated process of connecting devices to each other or to a server. According to the Florida Department of Education, <b>"A network consists of two or more computers that are linked in order to share resources (such as printers and CDs), exchange files, or allow electronic communications. The computers on a network may be linked through cables, telephone lines, radio waves, satellites, or infrared light beams." </b> To people outside of the IT field, an example would be when you connect your phone to another through  bluetooth. This is what is referred to as a Peer-to-Peer (P2P) Network.<br>
+ 		<b><i>Okay, got it. Are networks important?</i></b> <br>
+ 		Indeed they are, many places use networks to pass data and information around. A school's computer lab is an example, there is a main computer and all the other computers are connected to it but not to each other. This is an example of a Local Area Network. <br>
+ 		<b><i>Why do I need to learn about it?</i></b> <br>
+ 		As a developing IT professional, you should learn about it because it will be a very important part of your future as you work. Not only that, but knowing about it can help you with setting up your own personal network, and you'll know how to set it up and maximize it for something like a gaming or streaming setup. <br>
+ 		<b><i>Cool! Can you tell me more?</i></b> <br>
+ 		This whole website is dedicated to people that want to learn more about networks, like you! Check out the articles we have for you!
+ 	</p>
+ </div>
+
+ <button onclick="topFunction()" id="scrollUP" title="Go to top">Top</button>
+
+	<!--dropdown javascript (andito po kase ayaw gumana sa separate file ng js. ehe) -->
+
+	<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+//scroll to top btn
+var mybutton = document.getElementById("scrollUP");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

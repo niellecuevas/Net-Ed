@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Network Adaptors</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+
+<!-- Sidenav bar start-->
+
+	<nav>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		<div class="logo">
+			<ul id="logo2">
+				<li id="net">Net</li>
+				<li id="ed">Ed</li>
+			</ul>
+		</div>
+
+
+		<div id="mySidenav" class="sidenav" id="list-height">
+			<div id="exit-btn">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			</div>
+
+			<div id="options">
+			<a href="index.html">Home</a>
+			<button class="dropdown-btn" id="art-hov">Articles </button>
+			<div class="dropdown-container">
+				<a href="article1.html">Network Topologies</a>
+				<a href="article2.html">Transmission Media</a>
+				<a href="article3.html">Network Adapters</a>
+				<a href="article4.html">Client/Server Networks</a>
+			</div>
+			<a href="about-us.html">About Us</a>
+			</div>
+	</div>
+	</nav>
+<!-- sidebar navigation end -->
+
+
+<img id="net-top-banner" src="img/client-server.png">
+
+<!-- content -->
+
+<div class="title-holder">
+	<h2>Client Server Networks</h2>
+	<p>Servers and clients are the building blocks of computer networks</p>
+</div>
+
+<div class="content-holder">
+	<h3>Introduction to Client Server Networks</h3>
+	<p>Client-server networking grew in popularity during the 1990s as personal computers became the alternative to mainframe computers. Client-server networking refers to a computer networking model that uses both client hardware devices and servers, each with specific functions. <br>
+  The client-server model can be used on the internet as well as on a local area network (LAN). Examples of client-server systems on the internet include web browsers and web servers, FTP clients and servers, and the DNS.</p>
+  <br>
+
+  <h3>Introduction to Client Server Networks</h3>
+	<p>Client-server networking grew in popularity during the 1990s as personal computers became the alternative to mainframe computers. Client-server networking refers to a computer networking model that uses both client hardware devices and servers, each with specific functions. <br>
+  The client-server model can be used on the internet as well as on a local area network (LAN). Examples of client-server systems on the internet include web browsers and web servers, FTP clients and servers, and the DNS.</p>
+  <br>
+
+  <h3>Client and Server Hardware</h3>
+	<p>Client devices are typically PCs with network software applications installed that request and receive information over the network. In addition, mobile devices function as clients. <br>
+	Servers store files and databases, including complex applications and websites. Servers typically feature higher-powered central processors, more memory, and larger disk drives than client devices.</p>
+  <br>
+
+  <h3>Client-Server Applications</h3>
+	<p>The client-server model organizes network traffic using a client application and client devices. Network clients send messages to a server to make requests of it. Servers respond to clients by acting on each request and returning the results. One server supports many clients, and multiple servers can be networked together in a server pool to handle increased processing loads as the number of clients grows. <br>
+
+	A client computer and a server computer are two separate units of hardware, each customized for a designed purpose. For example, a web client works best with a large screen display, while a web server doesn't need a display and can be located anywhere in the world. <br>
+
+In some cases, however, a device can function as a client and a server for the same application. Additionally, a device that is a server for one application can simultaneously act as a client to other servers for different applications. <br>
+
+Some of the most popular applications on the internet follow the client-server model, including email, FTP, and web services. Each of these clients features a graphic or text-based user interface and a client application that connects the client to the server. In the case of email and FTP, users enter a computer name (or an IP address) into the interface to set up a connection to the server.
+
+</p>
+  <br>
+
+  <h3>Local Client-Server Networks</h3>
+	<p>Many home networks use client-server systems on a small scale. Broadband routers, for example, contain DHCP servers that provide IP addresses to the home computers, the DHCP clients. Other types of network servers found in a home include print servers and backup servers.</p>
+  <br>
+
+  <h3>Advantages of the Client-Server Model</h3>
+	<p>The client-server model of networking was initially developed to share access to database applications with many users. Compared to the mainframe model, client-server networking has better flexibility because connections can be made on-demand and as needed rather than being fixed. <br>
+
+The client-server model supports modular applications that can make the job of creating software easier. In the two-tier and three-tier types of client-server systems, software applications are separated into modular components, and each component is installed on clients or servers specialized for that subsystem.</p>
+  <br>
+
+  <h3>Client-Server vs. Peer-to-Peer</h3>
+	<p>Client-server networking is one approach to managing network applications. The primary alternative to client-server networking, peer-to-peer networking, treats all devices as having equivalent capability rather than specialized client or server roles. <br>
+
+	Compared to client-server networks, peer-to-peer networks offer advantages such as flexibility in expanding the network to handle a large number of clients. Client-server networks offer advantages over peer-to-peer networks such as the ability to manage applications and data in a centralized location.</p>
+  <br>
+	
+</div>
+
+</div>
+
+<footer>
+	<h4>Mitchell, B., (2021, June 25), "Introduction to Client Server Networks"</h4>
+	<p>Retrieved from:</p>
+	<a style="text-decoration: none;" target="_blank" class="cite-link" href="https://www.lifewire.com/introduction-to-client-server-networks-817420">https://www.lifewire.com/introduction-to-client-server-networks-817420</a>
+</footer>
+
+ <button onclick="topFunction()" id="scrollUP" title="Go to top">Top</button>
+
+	<!--dropdown javascript (andito po kase ayaw gumana sa separate file ng js. ehe) -->
+
+	<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+//scroll to top btn
+var mybutton = document.getElementById("scrollUP");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

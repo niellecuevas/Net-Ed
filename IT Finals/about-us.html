@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Our Team</title>
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+
+<!-- Sidenav bar start-->
+
+	<nav>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		<div class="logo">
+			<ul id="logo2">
+				<li id="net">Net</li>
+				<li id="ed">Ed</li>
+			</ul>
+		</div>
+
+
+		<div id="mySidenav" class="sidenav" id="list-height">
+			<div id="exit-btn">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			</div>
+
+			<div id="options">
+			<a href="index.html">Home</a>
+			<button class="dropdown-btn" id="art-hov">Articles </button>
+			<div class="dropdown-container">
+				<a href="article1.html">Network Topologies</a>
+				<a href="article2.html">Transmission Media</a>
+				<a href="article3.html">Network Adapters</a>
+				<a href="article4.html">Client/Server Networks</a>
+			</div>
+			<a href="about-us.html">About Us</a>
+			</div>
+	</div>
+	</nav>
+<!-- sidebar navigation end -->
+
+<div class="container">
+	<div class="header">
+		<h1 id="our-team">Our Team</h1>	
+		<p id="sub-title-team">Aspiring future IT professionals from Group 07 BSIT 1104</p>
+	</div>
+	<div class="sub-container">
+		<div class="teams">
+			<a href="https://www.facebook.com/sofie.peeps/" target="_blank"><img src="img/pepito.png"></a>
+			<div class="name">Sofia Mae Pepito</div>
+			<div class="design">Designer</div>
+			<div class="about">
+				Hello! I'm Sofia, call me Sofie for short! I'm one of the main programmers of this project, I am mainly in charge of the design and layout of the pages. I really like designing! I used to be a layout artist for a school newspaper, too.
+			</div>
+		</div>
+
+		<div class="teams">
+			<a href="https://www.facebook.com/ryusaki.neesan.1" target="_blank"><img src="img/cuevas.png"></a>
+			<div class="name">Raniella Cuevas</div>
+			<div class="design">Designer</div>
+			<div class="about">Hello there! I'm Ran and I am also one of the main programmers of this project. I am mostly in charge with the functionality of our website. My hobbies are reading novels like Percy Jacksons. I also love to read anime mangas. I play play to earn games too. Its competitive and stressful for most situations but enjoying what you do is what matters the most.</div>
+
+		</div>
+
+		<div class="teams">
+			 <a href="https://www.facebook.com/justvbn.alvin" target="_blank"><img src="img/hombre.png"></a>
+			<div class="name"> Alvin Luciani Hombre</div>
+			<div class="design">Designer</div>
+			<div class="about">My name's Alvin and I'm from Pinagkawitan. I am the last of the main programmers of this project. I am mostly in charge of the content, but I also programmed two of the articles here. I love gaming and playing billiard sometimes. But in the future I want to try something new. I'm taking this course to expand my knowledge in Computer literacy.</div>
+		</div>
+</div>
+</div>
+
+ <button onclick="topFunction()" id="scrollUP" title="Go to top">Top</button>
+
+	<!--dropdown javascript (andito po kase ayaw gumana sa separate file ng js. ehe) -->
+
+	<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+//scroll to top btn
+var mybutton = document.getElementById("scrollUP");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
